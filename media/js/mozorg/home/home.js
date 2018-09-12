@@ -38,12 +38,12 @@
              var sibling = getNextEl(event.currentTarget);
              var content = sibling.querySelector('.mzp-c-card-video-content');
 
-             var videoLink = document.querySelector('.video-play');
+             var videoLink = content.querySelector('.video-play');
              var videoId = videoLink.getAttribute('data-id');
 
              var player = new YT.Player(videoLink, {
-                 height: '390',
-                 width: '640',
+                 width: 640,
+                 height: 360,
                  videoId: videoId,
                  playerVars: {
                      modestbranding: 1, // hide YouTube logo.
@@ -76,7 +76,7 @@
 
                  if (state) {
                      window.dataLayer.push({
-                         'event': 'onReady',
+                         'event': 'video-interaction',
                          'videoTitle': title,
                          'interaction': state
                      });
@@ -169,4 +169,4 @@
          $stickyCTA.remove();
      }
 
- })(window.Waypoint);
+ })(window.jQuery, window.Waypoint);

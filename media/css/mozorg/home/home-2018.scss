@@ -5,17 +5,20 @@
 $font-path: '/media/fonts';
 $image-path: '/media/protocol/img';
 
-@import "../../../protocol/css/includes/lib";
-@import "../../../protocol/css/components/billboard";
-@import "../../../protocol/css/components/button";
-@import "../../../protocol/css/components/download-button";
-@import "../../../protocol/css/components/card";
-@import "../../../protocol/css/components/footer";
-@import "../../../protocol/css/components/modal";
-@import "../../../protocol/css/components/newsletter-form";
-@import "../../../protocol/css/templates/card-layout";
+@import '../../../protocol/css/includes/lib';
+@import '../../../protocol/css/components/billboard';
+@import '../../../protocol/css/components/button';
+@import '../../../protocol/css/components/footer';
+@import '../../../protocol/css/components/modal';
+@import '../../../protocol/css/components/newsletter-form';
+@import '../../../protocol/css/templates/card-layout';
 
 @import '../../hubs/nav-download-button-remove';
+
+.mzp-c-navigation {
+    position: relative;
+    z-index: 3;
+}
 
 // Override global-nav z-index for sticky header CTA.
 .moz-global-nav {
@@ -107,10 +110,10 @@ $image-path: '/media/protocol/img';
 
 @media #{$mq-lg} {
     .download-firefox-primary-cta {
-        border-top: 100px solid #fff;
+        border-top: 94px solid #fff;
         position: relative;
-        top: -100px;
-        margin-bottom: -100px;
+        top: -94px;
+        margin-bottom: -94px;
         @include bidi(((text-align, left, right),));
 
         .mzp-l-content {
